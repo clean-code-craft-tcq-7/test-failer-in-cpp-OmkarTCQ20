@@ -12,6 +12,7 @@ char size(int cms) {
     }
     return sizeName;
 }
+
 void testFunction()
 {
     assert(size(37) == 'S');
@@ -20,6 +21,7 @@ void testFunction()
     assert(size(42) == 'L');
     assert(size(43) == 'L');
 }
+
 int main() {
     testFunction();
     std::cout << "All is well (maybe!)\n";
