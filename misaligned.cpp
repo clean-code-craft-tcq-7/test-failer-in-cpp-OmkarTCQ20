@@ -1,26 +1,25 @@
 #include <iostream>
 #include <assert.h>
 
-int printColorMap() {
-    const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
-    const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
+const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
+const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
     
-    int GetPairNumber(int majorColorIndex, int minorColorIndex) {
+int GetPairNumber(int majorColorIndex, int minorColorIndex) {
     return (majorColorIndex * 5 + minorColorIndex + 1);
-    }
+}
     
-    const char* GetMajorColor(int majorColorIndex, int minorColorIndex, const char* majorColor[]) {       
+const char* GetMajorColor(int majorColorIndex, int minorColorIndex, const char* majorColor[]) {       
     int pairNumber = GetPairNumber(majorColorIndex, minorColorIndex);
     int majorColorFromPairNumber = (pairNumber - 1) / 5;
         
-        return majorColor[majorColorFromPairNumber];
-     }	
-    const char* GetMinorColor(int majorColorIndex, int minorColorIndex, const char* minorColor[]) {
+      return majorColor[majorColorFromPairNumber];
+ }	
+ const char* GetMinorColor(int majorColorIndex, int minorColorIndex, const char* minorColor[]) {
     int pairNumber = GetPairNumber(majorColorIndex, minorColorIndex);
     int minorColorFromPairNumber = pairNumber % 5;
 		
     return minorColor[minorColorFromPairNumber];
-   }
+  }
 
   bool TestPairAligment(int majorNum, int minorNum, const char* majorColorVal, const char* minorColorVal)
   {
