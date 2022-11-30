@@ -11,7 +11,7 @@ int networkAlertStub(float celcius) {
     if(celcius <= 200){
         return 200;
     }
-    return 500;
+  
 }
 
 void alertInCelcius(float farenheit) {
